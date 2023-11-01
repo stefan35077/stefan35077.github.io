@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div class="Titel">Robot Arm</div>
+    <div class="projectContainer">
+        <img src="../Imgs/Robotarmss.png" alt="RobotoArm" class="images">
+        <div class="projectInfo">
+            <p class="English">In our 3th period of school we got a big assignment where we had to make something that we had to come up with ourselves. I decided I wanted to make a project with the Arduino because that is what I am interested in, I started thinking of big projects that I wanted to make but found out that would be to much to make in a short time. I decided to make a robot like arm with legos but all it could do was wave at you when you clicked a button and make an annoying sound. Looking back at it I could have made it with a motion sensor so that it would wave when someone walked by but that’s to late now.</p>
+            <p class="Dutch">In onze derde schoolperiode kregen we een grote opdracht waarbij we iets moesten maken dat we zelf moesten bedenken. Ik besloot dat ik een project wilde maken met de Arduino, omdat dat me interesseerde. Ik begon te denken aan grote projecten die ik wilde maken, maar ontdekte dat dat te veel zou zijn om in korte tijd te realiseren. Ik besloot om een robotachtige arm met Lego te maken, maar het enige wat het kon doen, was naar je zwaaien wanneer je op een knop drukte en een vervelend geluid maken. Terugkijkend had ik het kunnen maken met een bewegingssensor, zodat het zou zwaaien wanneer iemand voorbijliep, maar dat is nu te laat.</p>
+
+        </div>
+        <div id="buttons">
+            <a class="btn" href="contact.html">
+                <p class="English">Contact Me!</p>
+                <p class="Dutch">Mail mij!</p>
+            </a>
+            <a class="Return" href="projects.html">
+                <p class="English">Return</p>
+                <p class="Dutch">Terug</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

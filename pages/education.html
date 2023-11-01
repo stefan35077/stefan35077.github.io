@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn navActive" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton activeButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div class="container">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div id="name">
+        <img src="../Imgs/profielfoto.jpeg" alt="profilePicture" id="profile">
+        <h1 id="myName">Stefan van Vliet</h1>
+    </div>
+    <div id="myInformation">
+        <p class="English">
+            Hello I am Stefan van Vliet and here is some information about me and my study.
+            I am 16 years old at the moment my birthday is on december 17. I have a couple hobby's which are football,
+            gaming and going out with my friends.
+            At the moment I am studying Software Development at <span class="sint">SiNT</span><span
+                class="lucas">LUCAS</span> in eindhoven.
+            I enjoy coding, but I also like to make 3D models in Blender I am not the best at it, but i'm improving.
+            I am not a 100% sure what type of programmar I want to become as I enjoy making websites in HTML, CSS and
+            JavaScript but I also like making games with C# and Lua, I once made a project with the arduino which I also
+            really enjoyed.
+            This was some information about me I hope this has informed you more! <br>
+            I am still learning so that is why my skill levels are all pretty low.
+        </p>
+
+        <p class="Dutch">
+            Hallo, ik ben Stefan van Vliet en hier is wat informatie over mij en mijn studie.
+            Ik ben op dit moment 16 jaar oud, mijn verjaardag is op 17 december. Ik heb een paar hobby's, namelijk
+            voetbal, gamen en uitgaan met mijn vrienden.
+            Op dit moment studeer ik Softwareontwikkeling aan <span class="sint">SiNT</span><span
+                class="lucas">LUCAS</span> in Eindhoven.
+            Ik geniet van programmeren, maar ik vind het ook leuk om 3D-modellen te maken in Blender. Ik ben er
+            misschien niet de beste in, maar ik ben aan het verbeteren.
+            Ik ben niet honderd procent zeker welk soort programmeur ik wil worden, omdat ik het leuk vind om websites
+            te maken met HTML, CSS en JavaScript, maar ik maak ook graag games met C# en Lua. Ooit heb ik een project
+            gemaakt met Arduino, wat ik ook erg leuk vond.
+            Dit was wat informatie over mij. Ik hoop dat dit je meer heeft geïnformeerd! <br>
+            Ik ben nog steeds aan het leren, daarom zijn mijn vaardigheidsniveaus allemaal vrij laag.
+
+        </p>
+    </div>
+    <div id="mySkills">
+        <div class="skill">
+            <div class="skillTitel">
+                <box-icon name='blender' type='logo' color='#ff9200' class="Icon"></box-icon>
+                <p class="Name">Blender</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">I have made a couple of projects in blender and I would say I'm decent at it.</p>
+                <p class="Dutch">Ik heb een paar projecten in blender gemaakt en ik zou zeggen dat ik er goed in
+                    ben.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skillTitel">
+                <box-icon name='unity' type='logo' color='#ff9200' class="Icon"></box-icon>
+                <p class="Name">C#/Unity</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">I have basic knowledge of the unity and the C# language, but I keep improving.</p>
+                <p class="Dutch">Ik heb basiskennis van de unity en de C# taal, maar ik blijf verbeteren.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skillTitel">
+                <box-icon name='adobe' type='logo' color='#ff9200' class="Icon"></box-icon>
+                <p class="Name">Photoshop/Illustrator</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">I have made a few projects but I'm below average.</p>
+                <p class="Dutch">Ik heb een paar projecten gemaakt, maar ik zit onder het gemiddelde.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox "></span>
+                <span class="skillBox "></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skillTitel">
+                <p class="Name">Roblox Lua</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">I have a couple years of experience in this programming language.</p>
+                <p class="Dutch">Ik heb een paar jaar ervaring in deze programmeertaal.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skillTitel">
+                <box-icon type='logo' name='html5' color='#ff9200' class="Icon"></box-icon>
+                <box-icon name='css3' type='logo' color='#ff9200' class="Icon"></box-icon>
+                <p class="Name">HTML/CSS</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">For only 2 years of experience i'd say I am pretty good at it.</p>
+                <p class="Dutch">Voor slechts 2 jaar ervaring zou ik zeggen dat ik er best goed in ben.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skillTitel">
+                <box-icon name='javascript' type='logo' color='#ff9200' class="Icon"></box-icon>
+                <p class="Name">JavaScript</p>
+            </div>
+            <div class="skillInfo">
+                <p class="English">I have only learned about this language recently, it's like C# but I'm better at JS.</p>
+                <p class="Dutch">Ik heb pas onlangs over deze taal geleerd, het is net als C#, maar ik ben beter in JS.</p>
+            </div>
+            <div class="skillLevel">
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox skillAdd"></span>
+                <span class="skillBox "></span>
+                <span class="skillBox"></span>
+                <span class="skillBox"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

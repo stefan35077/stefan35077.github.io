@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div class="Titel">Blender Guns</div>
+    <div class="projectContainer">
+        <img src="../Imgs/Screenshot%202023-11-01%20084409.png" alt="RenderedGuns" class="images">
+        <div class="projectInfo">
+            <p class="English">Together with my classmate Tim van den Eng we participated in a Game Jam, there were multiple fun themes but the theme we found best was called "Goldfish Dreams".
+                We decided to go with this theme as we already had some fun idea's, after writing down idea's and comparing for a bit we decided to make a game where the goldfish swims in the water but out of nowhere a fisherman caught him with a fishnet.
+                Now you are trapped in the fisherman's boat and have to return to the sea to escape, the level is a bit of a parcour game but with interesting movement, your fish needs water to survive but luckily there are some water buckets spread around the level.
+                My contribution to this game was coming up with the idea and making the 3D models.
+            </p>
+
+            <p class="Dutch">Samen met mijn klasgenoot Tim van den Eng hebben we deelgenomen aan een Game Jam. Er waren meerdere leuke thema's, maar het thema dat we het beste vonden, heette "Goudvissen Dromen".
+                We besloten om met dit thema te gaan, omdat we al wat leuke ideeën hadden. Na het opschrijven van ideeën en het vergelijken ervan, besloten we om een spel te maken waarin de goudvis in het water zwemt, maar plotseling wordt gevangen door een visser met een visnet.
+                Nu zit je gevangen in de boot van de visser en moet je terugkeren naar de zee om te ontsnappen. Het level is een soort parkourspel, maar met interessante bewegingen. Je vis heeft water nodig om te overleven, maar gelukkig zijn er watervaten verspreid over het level.
+                Mijn bijdrage aan dit spel was het bedenken van het idee en het maken van de 3D-modellen.
+            </p>
+        </div>
+        <div id="buttons">
+            <a class="btn" href="contact.html">
+                <p class="English">Contact Me!</p>
+                <p class="Dutch">Mail mij!</p>
+            </a>
+            <a class="Return" href="projects.html">
+                <p class="English">Return</p>
+                <p class="Dutch">Terug</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="index.html" class="navBtn navActive" id="Home">
+         <p class="English">Home</p>
+         <p class="Dutch">Home</p>
+        </a>
+        <a href="pages/projects.html" class="navBtn" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="index.html" class="dropButton activeButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="pages/projects.html" class="dropButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+
+
+<div id="pageContainer">
+    <div id="mainUi">
+        <button onclick="changeLang()" class="btn">NL/ENG</button>
+        <div id="aboutMe">
+            <div class="English">
+                <p class="">About me!</p> <br>
+
+                <p>Welcome to my portfolio site, My name is Stefan van Vliet and I am 16 years old.
+                    I have multiple hobby's some of them are gaming, football,
+                    creating systems/games and working on my brommer.
+                    I live in the Netherlands in Noord-Brabant. I am currently in school and do not have a job.
+                    On this site you will find about the things that I made and can do.</p>
+            </div>
+
+            <div class="Dutch">
+                <p class="">Over mij!</p> <br>
+
+                <p>Welkom op mijn portfolio site, Mijn naam is Stefan van Vliet en ik ben 16 jaar oud.
+                    Ik heb meerdere hobby's, sommige zijn gamen, voetbal,
+                    Systemen/games maken en werken aan mijn brommer.
+                    Ik woon in Nederland in Noord-Brabant. Ik zit momenteel op school en heb geen baan.
+                    Op deze site vind je de dingen die ik heb gemaakt en kan doen.</p>
+            </div>
+        </div>
+
+        <div id="bTitel">
+            <p class="English">MY BEST WORK!</p>
+            <p class="Dutch">MIJN BESTE WERK!</p>
+        </div>
+
+
+        <div class="portfolio-container">
+            <a class="projectButton portfolio-box" href="pages/RobotArm.html">
+                <img src="Imgs/robotarm.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <div class="English">
+                        <h4>Robot Arm</h4>
+                        <p>I created a robotic arm that could wave by pressing a button using the arduino!</p>
+                    </div>
+                    <div class="Dutch">
+                        <h4>Robot Arm</h4>
+                        <p>Ik heb een robotarm gemaakt die kan zwaaien door op een knop te drukken met behulp van de
+                            arduino!</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="projectButton portfolio-box" href="pages/BlenderProject.html">
+                <img src="Imgs/3D%20Guns.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <div class="English">
+                        <h4>Created 3D guns</h4>
+                        <p>In blender I made 2 guns, these were the first ever guns I made using blender!</p>
+                    </div>
+                    <div class="Dutch">
+                        <h4>3D Geweren</h4>
+                        <p>In blender heb ik 2 geweren gemaakt, dit waren de eerste geweren die ik ooit met blender heb
+                            gemaakt!</p>
+                    </div>
+                </div>
+            </a>
+
+            <div class="portfolio-box">
+                <img src="Imgs/vislogo.jpeg" alt="">
+                <div class="portfolio-layer">
+                    <div class="English">
+                        <h4>KIBBELING</h4>
+                        <p>Together with my classmate we made a game about the dream of a goldfish!</p>
+                    </div>
+
+                    <div class="Dutch">
+                        <h4>KIBBELING</h4>
+                        <p>Samen met mijn klasgenoot hebben we een spel gemaakt over de droom van een goudvis!</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

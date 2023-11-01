@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div class="Titel">Blender Guns</div>
+    <div class="projectContainer">
+        <img src="../Imgs/GunModels.png" alt="RenderedGuns" class="images">
+        <div class="projectInfo">
+            <p class="English">I used blender to create 3D models of the Colt 7 and the HK416 these are guns used by the
+                dutch military and marechaussee. I had to create these gun models for a game I am creating which will be
+                about the army. These were the first ever guns I created inside blender and to be honest I think they
+                look really good. I am very proud of these guns but there is definitely still room for a lot of
+                improvement.
+                What I learned during this project is a lot about blender I learned about different techniques and
+                tools. Making these guns has helped me improve my blender skills by a lot.
+            </p>
+
+            <p class="Dutch">Ik heb Blender gebruikt om 3D-modellen van de Colt 7 en de HK416 te maken. Dit zijn wapens
+                die worden gebruikt door het Nederlandse leger en de marechaussee. Ik moest deze geweermodellen maken
+                voor een spel dat ik aan het ontwikkelen ben, dat over het leger zal gaan. Dit waren de allereerste
+                geweren die ik in Blender heb gemaakt, en eerlijk gezegd vind ik dat ze er echt goed uitzien. Ik ben erg
+                trots op deze geweren, maar er is zeker nog veel ruimte voor verbetering.
+                Wat ik tijdens dit project heb geleerd, is veel over Blender. Ik heb verschillende technieken en
+                gereedschappen geleerd. Het maken van deze geweren heeft me mijn vaardigheden in Blender aanzienlijk
+                doen verbeteren.
+            </p>
+        </div>
+        <div id="buttons">
+            <a class="btn" href="contact.html">
+                <p class="English">Contact Me!</p>
+                <p class="Dutch">Mail mij!</p>
+            </a>
+            <a class="Return" href="projects.html">
+                <p class="English">Return</p>
+                <p class="Dutch">Terug</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

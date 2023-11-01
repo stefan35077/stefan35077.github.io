@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn navActive" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton activeButton">Contact</a>
+</div>
+
+<button onclick="changeLang()" class="btn">NL/ENG</button>
+
+<div id="pageContainer">
+    <form id="contact-form">
+        <input name="name" type="text" class="feedback-input" placeholder="Name" required autofocus/>
+        <input id="email" name="email" type="text" class="feedback-input" placeholder="Email" required autofocus/>
+        <input name="subject" type="text" class="feedback-input" placeholder="Subject" required autofocus/>
+        <textarea name="message" class="feedback-input" placeholder="Comment"  required autofocus></textarea>
+        <input type="submit" value="SUBMIT"/>
+        <div id="succesfull" class="succes"></div>
+    </form>
+</div>
+
+
+<script src="../scripts/script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script src="../scripts/contact.js"></script>
+</body>
+</html>
