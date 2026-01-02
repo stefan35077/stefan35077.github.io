@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     window.addEventListener("click", function (event) {
-        if (!event.target.matches("#dropMenu") && !event.target.matches(".dropButton")) {
+        const clickedInsideMenu = dropContent.contains(event.target);
+        const clickedToggle = event.target === dropMenu;
+
+        if (dropContent.classList.contains("show") && !clickedInsideMenu && !clickedToggle) {
             dropContent.classList.remove("show");
         }
     });
 });
-

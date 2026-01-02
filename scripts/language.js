@@ -1,24 +1,18 @@
 function languageSet() {
-    let language = parseInt(localStorage.getItem('language')) || 0;
-    let EngText = document.getElementsByClassName("English");
-    let NlText = document.getElementsByClassName("Dutch");
+    const language = localStorage.getItem("language") === "1" ? "nl" : "en";
+    const body = document.body;
 
-    for (let i = 0; i < EngText.length; i++) {
-        if (language === 0) {
-            EngText[i].style.display = 'block';
-            NlText[i].style.display = 'none';
-        } else {
-            EngText[i].style.display = 'none';
-            NlText[i].style.display = 'block';
-        }
-    }
+    if (!body) return;
 
-    console.log("called");
-    console.log(localStorage.getItem('language'));
+    body.classList.toggle("lang-en", language === "en");
+    body.classList.toggle("lang-nl", language === "nl");
+    document.documentElement.setAttribute("lang", language);
 }
 
-function changeLang(){
-    localStorage.getItem('language') == "0" ? localStorage.setItem('language', "1") : localStorage.setItem('language', "0");
+function changeLang() {
+    const next = localStorage.getItem("language") === "1" ? "0" : "1";
+    localStorage.setItem("language", next);
     languageSet();
-    console.log("CHANGE!");
 }
+
+document.addEventListener("DOMContentLoaded", languageSet);
