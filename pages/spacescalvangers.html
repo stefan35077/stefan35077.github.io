@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div class="Titel">After Party!!</div>
+    <div class="projectContainer">
+        <img src="../Imgs/afterparty.png" class="images"/>
+        <div class="projectInfo">
+            <p class="English"> After Party was a project my friends and I worked on together. We were given the challenge of creating a game with the theme of 'Cleaning.' You might wonder how cleaning fits into our game.
+                In After Party, you find yourself in a messy house after throwing a wild party while your parents were away. The twist? You're still feeling the effects of the party, and your mom is coming back earlier than expected. Now, it's your job to clean up before she arrives.
+                We spent six weeks developing this game, and it was a lot of fun. Not only did we enjoy ourselves, but we also learned a great deal about Unity and programming.
+                If this game sounds interesting to you, give it a try! Download it and experience the chaos of After Party for yourself. Get ready to clean up the mess and have some fun!
+            </p>
+
+            <p class="Dutch">After Party was een project waar mijn vrienden en ik samen aan werkten. We kregen de uitdaging om een spel te maken met als thema 'Schoonmaken.' Je vraagt je misschien af hoe schoonmaken in ons spel past.
+                In After Party bevind je jezelf in een rommelig huis na het geven van een wild feest terwijl je ouders weg waren. De twist? Je voelt nog steeds de effecten van het feest, en je moeder komt eerder terug dan verwacht. Nu is het jouw taak om op te ruimen voordat ze arriveert.
+                We hebben zes weken aan dit spel gewerkt, en het was erg leuk. We hebben niet alleen plezier gehad, maar we hebben ook veel geleerd over Unity en programmeren.
+                Als dit spel interessant klinkt voor jou, probeer het dan eens! Download het en ervaar zelf de chaos van After Party. Maak je klaar om de rommel op te ruimen en plezier te hebben!
+            </p>
+        </div>
+        <div id="buttons">
+            <a class="btn" href="contact.html">
+                <p class="English">Contact Me!</p>
+                <p class="Dutch">Mail mij!</p>
+            </a>
+            <a class="Return" href="projects.html">
+                <p class="English">Return</p>
+                <p class="Dutch">Terug</p>
+            </a>
+            <a class="btn" href="https://swordiguy.itch.io/after-party" target="_blank">
+                <p>Download!
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>

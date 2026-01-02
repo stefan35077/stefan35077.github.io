@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()">
+
+<header>
+    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <div id="titelbox">Stefan's portfolio site</div>
+    <box-icon name='menu' color='#ffffff' id="dropMenu"></box-icon>
+    <div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+    <div class="Titel">Hotel Hustle</div>
+    <div class="projectContainer">
+        <img src="../Imgs/game_logo.png" class="images"/>
+        <div class="projectInfo">
+            <p class="English"> 
+                Hotel Hustle is a chaotic hotel management game that combines five different art styles. This unique approach comes from working with five artists, each using their own visual style for modeling and drawing.
+The goal of the game is simple: keep your guests happy. Guests arrive at the front desk and request a room with specific requirements, such as a realistic bed, a cartoony lamp, and a shabby nightstand.
+Your job is to collect the correct objects from the storage room and assemble the room. Inside the storage area, all furniture is available, and by pulling a magical lever, you can change the art style of each object before placing it in the room.
+            </p>
+
+            <p class="Dutch">Hotel Hustle is een chaotische hotelmanagementgame waarin vijf verschillende artstijlen samenkomen. Deze unieke mix is ontstaan doordat we met vijf artists werkten, ieder met een eigen teken- en modelleerstijl.
+Het doel van de game is simpel: houd je gasten tevreden. Gasten melden zich bij de balie en vragen om een kamer met specifieke wensen, zoals een realistisch bed, een cartoony lamp en een shabby nachtkastje.
+Het is jouw taak om de juiste objecten uit de opslagruimte te halen en de kamer samen te stellen. In de opslag staan alle meubels, en met behulp van een magische hendel kun je hun artstijl veranderen voordat je ze in de kamer plaatst.
+            </p>
+        </div>
+        <div id="buttons">
+            <a class="btn" href="contact.html">
+                <p class="English">Contact Me!</p>
+                <p class="Dutch">Mail mij!</p>
+            </a>
+            <a class="Return" href="projects.html">
+                <p class="English">Return</p>
+                <p class="Dutch">Terug</p>
+            </a>
+            <a class="btn" href="https://stefan3507.itch.io/hotel-hustle" target="_blank">
+                <p>Play Here!
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="../scripts/script.js"></script>
+</body>
+</html>
