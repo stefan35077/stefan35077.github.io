@@ -539,6 +539,10 @@ textarea {
     cursor: pointer;
 }
 
+.itchLink{
+    margin: 25px auto 0;
+}
+
 #mySkills{
     justify-content: center;
     display: flex;
