@@ -398,6 +398,21 @@ textarea {
     border: solid 2px var(--main-color);
 }
 
+.video-embed{
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border: solid 2px var(--main-color);
+    background-color: #000;
+}
+
+.video-embed iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 
 .projectInfo{
     border-radius: 10px;
@@ -408,13 +423,15 @@ textarea {
 }
 
 @media screen and (max-width: 900px) {
-    .images{
+    .images,
+    .video-embed{
         max-width: 600px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .images{
+    .images,
+    .video-embed{
         max-width: 450px;
     }
 }
@@ -493,6 +510,22 @@ textarea {
     border: solid 2px var(--main-color);
     border-radius: 10px;
     width: 70%;
+    color: white;
+}
+
+.skillsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px var(--main-color);
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: white;
+    text-align: center;
+}
+
+.skillsHeader h2{
+    font-size: xx-large;
     color: white;
 }
 
