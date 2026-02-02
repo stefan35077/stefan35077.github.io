@@ -178,6 +178,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #aboutMe{
@@ -222,15 +223,17 @@ footer{
 .portfolio-container {
     position: relative;
     display: flex;
-    width: 75%;
+    width: min(1100px, 92%);
     height: 50%;
     align-items: center;
-    gap: 2.481%;
+    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .portfolio-box{
-    width: min(360px, 100%);
+    width: min(280px, 100%);
     aspect-ratio: 9 / 10;
     background-color: var(--second-bg-color);
     border: 1px solid var(--border-color);
@@ -500,6 +503,18 @@ textarea {
     justify-content: center;
     gap: 25px;
     width: min(960px, 100%);
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolio-container{
+        width: 75%;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .portfolio-box{
+        width: calc(25% - 15px);
+    }
 }
 
 .Return{
