@@ -1,9 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 *{
     margin: 0;
     font-family: Poppins, sans-serif;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 1371px){
@@ -15,7 +16,9 @@
         display: flex;
         flex: 2;
         color: white;
-        font-size: xx-large;
+        font-size: 1.8rem;
+        font-family: "DM Serif Display", serif;
+        letter-spacing: 0.04em;
         overflow: visible;
     }
 
@@ -31,9 +34,12 @@
 
     #navigation a{
         color: var(--text-color);
-        font-size: x-large;
+        font-size: 1.05rem;
+        font-weight: 600;
         text-decoration: none;
         transition: transform .3s;
+        padding: 8px 12px;
+        border-radius: 999px;
     }
 
     #navigation .navActive{
@@ -46,7 +52,8 @@
 
     #navigation a:hover{
         color: var(--main-color);
-        transform: translate(0%, -15%);
+        transform: translateY(-2px);
+        background-color: rgba(224, 88, 74, 0.12);
     }
 }
 
@@ -55,7 +62,9 @@
         display: flex;
         flex: 2;
         color: white;
-        font-size: x-large;
+        font-size: 1.4rem;
+        font-family: "DM Serif Display", serif;
+        letter-spacing: 0.04em;
         overflow: visible;
     }
 
@@ -76,10 +85,14 @@
 }
 
 :root{
-    --bg-color: #0f171e;
-    --second-bg-color: #1d2834;
-    --text-color: #fff;
-    --main-color: #b93934;
+    --bg-color: #0f141b;
+    --second-bg-color: #151d26;
+    --surface-color: #1c2531;
+    --text-color: #f5f7fa;
+    --muted-text: #b6c0cc;
+    --main-color: #e0584a;
+    --border-color: rgba(224, 88, 74, 0.35);
+    --shadow-color: rgba(5, 9, 13, 0.6);
 }
 
 .lang-en .Dutch{
@@ -92,21 +105,38 @@
 
 body{
     background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
 }
 
 html{
     overflow-x: hidden;
 }
 
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(224, 88, 74, 0.18), transparent 45%),
+        radial-gradient(circle at 85% 5%, rgba(245, 247, 250, 0.05), transparent 40%),
+        linear-gradient(180deg, rgba(15, 20, 27, 0.95), rgba(10, 14, 20, 0.98));
+    z-index: -1;
+}
+
 header{
     gap: 25px;
-    padding: 10px;
+    padding: 12px 24px;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: rgba(15, 20, 27, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px var(--main-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 16px 30px rgba(4, 8, 12, 0.45);
+    backdrop-filter: blur(12px);
     z-index: 999;
 }
 
@@ -141,6 +171,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 32px 24px 64px;
 }
 
 #mainUi{
@@ -153,11 +184,13 @@ footer{
     width: 60%;
     padding: 25px;
     margin: 25px;
-    border: solid var(--main-color) 2px;
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
     color: white;
     text-align: center;
     justify-content: center;
+    background-color: rgba(21, 29, 38, 0.9);
+    box-shadow: 0 18px 28px var(--shadow-color);
 }
 
 #bestWork{
@@ -175,14 +208,15 @@ footer{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: xx-large;
+    font-size: 2.2rem;
     color: white;
     width: 75%;
     padding: 10px;
     margin: 15px;
-    border: solid var(--main-color) 2px;
-    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
     box-sizing: border-box;
+    background-color: rgba(21, 29, 38, 0.9);
 }
 
 .portfolio-container {
@@ -199,14 +233,14 @@ footer{
     width: min(360px, 100%);
     aspect-ratio: 9 / 10;
     background-color: var(--second-bg-color);
-    border: solid 2px var(--main-color);
+    border: 1px solid var(--border-color);
     cursor: pointer;
 }
 
 .portfolio-container .portfolio-box {
     position: relative;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem var(--bg-color);
+    border-radius: 1.2rem;
+    box-shadow: 0 24px 40px var(--shadow-color);
     overflow: hidden;
     display: flex;
 }
@@ -226,7 +260,7 @@ footer{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(224, 88, 74, 0.85));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,7 +276,9 @@ footer{
 
 .portfolio-layer h4 {
     color: var(--text-color);
-    font-size: 3rem;
+    font-size: 2.6rem;
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0.03em;
 }
 
 .portfolio-layer p {
@@ -355,11 +391,13 @@ textarea {
     flex-direction: column;
     width: 50vh;
     height: 35vh;
-    border-radius: 10px;
+    border-radius: 16px;
     align-items: center;
     justify-content: start;
-    border: solid 2px var(--main-color);
+    border: 1px solid var(--border-color);
     overflow: hidden;
+    background-color: rgba(21, 29, 38, 0.9);
+    box-shadow: 0 18px 30px var(--shadow-color);
 }
 
 .project:hover img{
@@ -367,17 +405,18 @@ textarea {
 }
 
 .projectTitel{
-    font-size: xx-large;
+    font-size: 1.9rem;
     color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top: solid 2px var(--main-color);
-    border-left: solid 2px var(--main-color);
-    border-right: solid 2px var(--main-color);
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     width: 100%;
+    font-family: "DM Serif Display", serif;
 }
 
 .project img{
@@ -387,23 +426,28 @@ textarea {
 
 .Titel{
     margin: 25px;
-    font-size: xxx-large;
+    font-size: 3rem;
     color: var(--text-color);
-    text-shadow: -1px -1px 0 var(--main-color), -1px -1px 0 var(--main-color), -1px -1px 0 var(--main-color), -1px -1px 0 var(--main-color) ;
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0.04em;
 }
 .images{
     width: 100%;
     max-width: 800px;
     height: auto;
-    border: solid 2px var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    box-shadow: 0 20px 36px var(--shadow-color);
 }
 
 .video-embed{
     width: 100%;
     max-width: 800px;
     aspect-ratio: 16 / 9;
-    border: solid 2px var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
     background-color: #000;
+    box-shadow: 0 20px 36px var(--shadow-color);
 }
 
 .video-embed iframe{
@@ -415,11 +459,13 @@ textarea {
 
 
 .projectInfo{
-    border-radius: 10px;
-    padding: 10px;
-    border: solid 2px var(--main-color);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
     color: var(--text-color);
-    width: 70%;
+    width: min(720px, 100%);
+    background-color: rgba(21, 29, 38, 0.9);
+    box-shadow: 0 18px 30px var(--shadow-color);
 }
 
 @media screen and (max-width: 900px) {
@@ -453,6 +499,7 @@ textarea {
     align-items: center;
     justify-content: center;
     gap: 25px;
+    width: min(960px, 100%);
 }
 
 .Return{
@@ -460,18 +507,23 @@ textarea {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: x-large;
-    border: solid 2px var(--main-color);
-    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
     color: var(--text-color);
-    background-color: transparent;
-    width: 140px;
-    height: 50px;
-    margin: 25px;
+    background-color: rgba(21, 29, 38, 0.9);
+    width: 160px;
+    height: 48px;
+    margin: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .Return:hover{
     cursor: pointer;
+    transform: translateY(-2px);
+    border-color: rgba(224, 88, 74, 0.7);
+    box-shadow: 0 12px 18px rgba(4, 8, 12, 0.45);
 }
 
 .projectButton{
@@ -507,21 +559,24 @@ textarea {
     justify-content: center;
     align-items: center;
     padding: 25px;
-    border: solid 2px var(--main-color);
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
     width: 70%;
     color: white;
+    background-color: rgba(21, 29, 38, 0.9);
+    box-shadow: 0 18px 28px var(--shadow-color);
 }
 
 .skillsHeader{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 2px var(--main-color);
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
     padding: 10px 25px;
     color: white;
     text-align: center;
+    background-color: rgba(21, 29, 38, 0.9);
 }
 
 .skillsHeader h2{
@@ -551,6 +606,8 @@ textarea {
 #buttons{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -558,18 +615,25 @@ textarea {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: large;
-    border: solid 2px var(--main-color);
-    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
     color: var(--text-color);
-    background-color: transparent;
-    width: 140px;
-    height: 50px;
-    margin: 25px;
+    background-color: rgba(21, 29, 38, 0.9);
+    width: 170px;
+    height: 48px;
+    margin: 10px;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .btn:hover{
     cursor: pointer;
+    transform: translateY(-2px);
+    border-color: rgba(224, 88, 74, 0.7);
+    box-shadow: 0 12px 18px rgba(4, 8, 12, 0.45);
+    background-color: rgba(224, 88, 74, 0.16);
 }
 
 .itchLink{
@@ -588,8 +652,10 @@ textarea {
     .skill{
         width: 34vw;
         padding: 10px;
-        border: solid 2px var(--main-color);
-        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        background-color: rgba(21, 29, 38, 0.9);
+        box-shadow: 0 16px 26px var(--shadow-color);
     }
 
     .Name{
@@ -603,8 +669,10 @@ textarea {
     .skill{
         width: 70vw;
         padding: 10px;
-        border: solid 2px var(--main-color);
-        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        background-color: rgba(21, 29, 38, 0.9);
+        box-shadow: 0 16px 26px var(--shadow-color);
     }
 
     .Name{
