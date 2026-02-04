@@ -12,7 +12,9 @@
 <body onload="languageSet()">
 
 <header>
-    <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    <a href="../index.html" aria-label="Home">
+        <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    </a>
     <div id="titelbox">Stefan's portfolio site</div><div id="navigation">
         <a href="../index.html" class="navBtn" id="Home">
             <p class="English">Home</p>
@@ -28,6 +30,7 @@
         </a>
         <a href="../pages/contact.html" class="navBtn navActive" id="Contact">Contact</a>
     </div>
+    <button id="dropMenu" class="btn" aria-label="Open menu">Menu</button>
     <button onclick="changeLang()" class="btn">NL/ENG</button>
 </header>
 
