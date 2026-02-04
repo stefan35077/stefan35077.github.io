@@ -98,4 +98,87 @@ document.addEventListener("DOMContentLoaded", function () {
 
         img.replaceWith(video);
     });
+
+    if (!document.getElementById("scriptShelf")) {
+        const scriptPrefix = window.location.pathname.includes("/pages/") ? "../scripts/" : "scripts/";
+        const defaultScripts = [
+            {
+                file: "script.js",
+                label: { en: "Main UI + media helper", nl: "Hoofd UI + media helper" }
+            },
+            {
+                file: "language.js",
+                label: { en: "Language switcher", nl: "Taal wisselaar" }
+            },
+            {
+                file: "contact.js",
+                label: { en: "Contact form handler", nl: "Contactformulier handler" }
+            },
+            {
+                file: "imageClicker.js",
+                label: { en: "Image click effects", nl: "Klik effecten voor images" }
+            }
+        ];
+
+        const scripts = Array.isArray(window.projectScripts) ? window.projectScripts : defaultScripts;
+        if (!scripts.length) {
+            return;
+        }
+
+        const shelf = document.createElement("section");
+        shelf.className = "script-shelf";
+        shelf.id = "scriptShelf";
+
+        const title = document.createElement("div");
+        title.className = "script-shelf-title";
+        title.innerHTML = `
+            <h2 class="English">Project Scripts</h2>
+            <h2 class="Dutch">Project scripts</h2>
+            <p class="English">Open any script like you would in a game engine.</p>
+            <p class="Dutch">Open een script alsof je in een game engine zit.</p>
+        `;
+
+        const list = document.createElement("div");
+        list.className = "script-shelf-list";
+
+        scripts.forEach((item) => {
+            const card = document.createElement("div");
+            card.className = "script-card";
+
+            const meta = document.createElement("div");
+            meta.className = "script-meta";
+
+            const name = document.createElement("p");
+            name.className = "script-name";
+            name.innerHTML = `
+                <span class="English">${item.label.en}</span>
+                <span class="Dutch">${item.label.nl}</span>
+            `;
+
+            const file = document.createElement("p");
+            file.className = "script-file";
+            file.textContent = item.file;
+
+            meta.appendChild(name);
+            meta.appendChild(file);
+
+            const action = document.createElement("a");
+            action.className = "btn script-open";
+            action.href = item.path ? item.path : `${scriptPrefix}${item.file}`;
+            action.target = "_blank";
+            action.rel = "noopener noreferrer";
+            action.innerHTML = `
+                <span class="English">Open Script</span>
+                <span class="Dutch">Open Script</span>
+            `;
+
+            card.appendChild(meta);
+            card.appendChild(action);
+            list.appendChild(card);
+        });
+
+        shelf.appendChild(title);
+        shelf.appendChild(list);
+        document.body.appendChild(shelf);
+    }
 });
