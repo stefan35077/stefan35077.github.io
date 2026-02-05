@@ -10,5 +10,9 @@ window.projectScripts = [
   "StationRefuel.cs",
   "StationRepair.cs",
   "StationScript.cs",
-  "StationSell.cs"
+  "StationSell.cs",
+  "GameManager",
+  "MenuManager",
+  "PauseManager",
+  "PlayerAudioManager"
 ];
