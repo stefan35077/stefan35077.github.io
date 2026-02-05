@@ -99,6 +99,22 @@ document.addEventListener("DOMContentLoaded", function () {
         img.replaceWith(video);
     });
 
+    const skillCards = document.querySelectorAll(".skill");
+    skillCards.forEach((skill) => {
+        const toggle = skill.querySelector(".skillToggle");
+        const panel = skill.querySelector(".skillPanel");
+
+        if (!toggle || !panel) {
+            return;
+        }
+
+        toggle.addEventListener("click", () => {
+            const isOpen = skill.classList.toggle("is-open");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            panel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+        });
+    });
+
     const disableShelf = document.body && document.body.classList.contains("no-script-shelf");
     if (disableShelf || document.getElementById("scriptShelf")) {
         return;

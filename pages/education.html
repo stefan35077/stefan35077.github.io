@@ -85,77 +85,135 @@
     </div>
     <div id="mySkills">
         <div class="skill">
-            <div class="skillTitel"><p class="Name">Blender</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I have made alot of blender projects and would say I'm quite good at it.</p>
-                <p class="Dutch">Ik heb best veel blender projecten gemaakt en zou zeggen dat ik er best goed in ben.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skillTitel"><p class="Name">C#/Unity</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I have good knowledge of the unity engine and the C# language, but I keep improving.</p>
-                <p class="Dutch">Ik heb goeie kennis van unity en C#, maar ik blijf verbeteren.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skillTitel"><p class="Name">Scrum</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I use Scrum to plan work in sprints, run stand-ups, and keep tasks clear.</p>
-                <p class="Dutch">Ik gebruik Scrum om in sprints te plannen, stand-ups te doen en taken duidelijk te houden.</p>
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">Blender</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens">
+                    <img src="../Imgs/piaggioskipper.png" alt="Blender model 1">
+                    <img src="../Imgs/scooter2.png" alt="Blender model 2">
+                    <img src="../Imgs/gun1.png" alt="Blender model 3">
+                    <img src="../Imgs/gun2.png" alt="Blender model 4">
+                </div>
             </div>
         </div>
 
         <div class="skill">
-            <div class="skillTitel">
-                <p class="Name">Physical Computing</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I build simple prototypes with sensors and microcontrollers.</p>
-                <p class="Dutch">Ik bouw eenvoudige prototypes met sensoren en microcontrollers.</p>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skillTitel">
-                <p class="Name">Adobe</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I use Adobe tools for basic design and editing tasks.</p>
-                <p class="Dutch">Ik gebruik Adobe tools voor basis design en bewerking.</p>
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">C#/Unity</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens"></div>
             </div>
         </div>
 
         <div class="skill">
-            <div class="skillTitel">
-                <p class="Name">Roblox Lua</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">I have a couple years of experience in this programming language.</p>
-                <p class="Dutch">Ik heb een paar jaar ervaring in deze programmeertaal.</p>
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">Scrum</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens">
+                    <img src="../Imgs/scrum1.png" alt="Scrum 1">
+                    <img src="../Imgs/scrum2.png" alt="Scrum 2">
+                    <img src="../Imgs/scrum3.png" alt="Scrum 3">
+                    <img src="../Imgs/scrum4.png" alt="Scrum 4">
+                </div>
             </div>
         </div>
 
         <div class="skill">
-            <div class="skillTitel"><p class="Name">HTML/CSS</p>
-            </div>
-            <div class="skillInfo">
-                <p class="English">For only 2 years of experience i'd say I am pretty good at it.</p>
-                <p class="Dutch">Voor slechts 2 jaar ervaring zou ik zeggen dat ik er best goed in ben.</p>
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">Physical Computing</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens"></div>
             </div>
         </div>
 
         <div class="skill">
-            <div class="skillTitel"><p class="Name">JavaScript</p>
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">Adobe</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens">
+                    <img src="../Imgs/ps1.png" alt="Adobe Photoshop 1">
+                    <img src="../Imgs/ps2.png" alt="Adobe Photoshop 2">
+                </div>
             </div>
-            <div class="skillInfo">
-                <p class="English">I have only used JS a couple times, but it's not that hard.</p>
-                <p class="Dutch">Ik heb JS maar een paar keer gebruikt, maar het is niet zo moeilijk.</p>
+        </div>
+
+        <div class="skill">
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">Roblox Lua</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens">
+                    <img src="../Imgs/roblox1.png" alt="Roblox 1">
+                    <img src="../Imgs/roblox2.png" alt="Roblox 2">
+                    <img src="../Imgs/roblox3.png" alt="Roblox 3">
+                    <img src="../Imgs/roblox4.png" alt="Roblox 4">
+                    <img src="../Imgs/roblox5.png" alt="Roblox 5">
+                    <img src="../Imgs/roblox6.png" alt="Roblox 6">
+                    <img src="../Imgs/roblox7.png" alt="Roblox 7">
+                    <img src="../Imgs/roblox8.png" alt="Roblox 8">
+                </div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">HTML/CSS</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <button class="skillToggle" type="button" aria-expanded="false">
+                <span class="Name">JavaScript</span>
+                <span class="skillHint">
+                    <span class="English">Click to expand</span>
+                    <span class="Dutch">Klik om te openen</span>
+                </span>
+            </button>
+            <div class="skillPanel" aria-hidden="true">
+                <div class="skillScreens">
+                    <img src="../Imgs/JS1.png" alt="JavaScript 1">
+                    <img src="../Imgs/JS2.png" alt="JavaScript 2">
+                    <img src="../Imgs/JS3.png" alt="JavaScript 3">
+                    <img src="../Imgs/JS4.png" alt="JavaScript 4">
+                    <img src="../Imgs/JS5.png" alt="JavaScript 5">
+                    <img src="../Imgs/JS6.png" alt="JavaScript 6">
+                </div>
             </div>
         </div>
     </div>
