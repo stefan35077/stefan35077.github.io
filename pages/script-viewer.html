@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../scripts/language.js"></script>
+</head>
+<body onload="languageSet()" class="no-script-shelf">
+
+<header>
+    <a href="../index.html" aria-label="Home">
+        <img src="../Imgs/PortfolioLogo.png" class="PImage" alt="Image">
+    </a>
+    <div id="titelbox">Stefan's portfolio site</div><div id="navigation">
+        <a href="../index.html" class="navBtn" id="Home">
+            <p class="English">Home</p>
+            <p class="Dutch">Home</p>
+        </a>
+        <a href="../pages/projects.html" class="navBtn navActive" id="Projects">
+            <p class="English">Projects</p>
+            <p class="Dutch">Projecten</p>
+        </a>
+        <a href="../pages/education.html" class="navBtn" id="About">
+            <p class="English">About me</p>
+            <p class="Dutch">Over mij</p>
+        </a>
+        <a href="../pages/contact.html" class="navBtn" id="Contact">Contact</a>
+    </div>
+    <button id="dropMenu" class="btn" aria-label="Open menu">Menu</button>
+    <button onclick="changeLang()" class="btn">NL/ENG</button>
+</header>
+
+<div id="dropContent">
+    <a href="../index.html" class="dropButton">
+        <p class="English">Home</p>
+        <p class="Dutch">Home</p>
+    </a>
+    <a href="../pages/projects.html" class="dropButton activeButton">
+        <p class="English">Projects</p>
+        <p class="Dutch">Projecten</p>
+    </a>
+    <a href="../pages/education.html" class="dropButton">
+        <p class="English">About me</p>
+        <p class="Dutch">Over mij</p>
+    </a>
+    <a href="../pages/contact.html" class="dropButton">Contact</a>
+</div>
+
+<div id="pageContainer2">
+    <div class="Titel">
+        <span class="English" id="viewerTitleEn">Script Viewer</span>
+        <span class="Dutch" id="viewerTitleNl">Script bekijken</span>
+    </div>
+
+    <section class="script-viewer">
+        <div class="script-viewer-header">
+            <div class="script-viewer-info">
+                <p class="script-viewer-meta" id="viewerFileName">Loading...</p>
+                <p class="script-viewer-meta" id="viewerPath"></p>
+            </div>
+            <div class="script-viewer-actions">
+                <button class="btn" id="viewerCopy">
+                    <span class="English">Copy</span>
+                    <span class="Dutch">Kopieer</span>
+                </button>
+                <a class="btn" id="viewerDownload" href="#">
+                    <span class="English">Download</span>
+                    <span class="Dutch">Download</span>
+                </a>
+                <a class="btn" id="viewerRaw" href="#" target="_blank" rel="noopener noreferrer">
+                    <span class="English">Open Raw</span>
+                    <span class="Dutch">Open Raw</span>
+                </a>
+            </div>
+        </div>
+        <p class="script-viewer-status" id="viewerStatus">
+            <span class="English" id="viewerStatusEn">Loading script...</span>
+            <span class="Dutch" id="viewerStatusNl">Script laden...</span>
+        </p>
+        <div class="script-viewer-panel">
+            <pre><code id="viewerCode"></code></pre>
+        </div>
+    </section>
+</div>
+
+<script src="../scripts/script.js"></script>
+<script src="../scripts/script-viewer.js"></script>
+</body>
+</html>

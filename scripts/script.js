@@ -99,28 +99,48 @@ document.addEventListener("DOMContentLoaded", function () {
         img.replaceWith(video);
     });
 
-    if (!document.getElementById("scriptShelf")) {
-        const scriptPrefix = window.location.pathname.includes("/pages/") ? "../scripts/" : "scripts/";
-        const defaultScripts = [
-            {
-                file: "script.js",
-                label: { en: "Main UI + media helper", nl: "Hoofd UI + media helper" }
-            },
-            {
-                file: "language.js",
-                label: { en: "Language switcher", nl: "Taal wisselaar" }
-            },
-            {
-                file: "contact.js",
-                label: { en: "Contact form handler", nl: "Contactformulier handler" }
-            },
-            {
-                file: "imageClicker.js",
-                label: { en: "Image click effects", nl: "Klik effecten voor images" }
-            }
-        ];
+    const disableShelf = document.body && document.body.classList.contains("no-script-shelf");
+    if (disableShelf || document.getElementById("scriptShelf")) {
+        return;
+    }
 
-        const scripts = Array.isArray(window.projectScripts) ? window.projectScripts : defaultScripts;
+    const scriptPrefix = window.location.pathname.includes("/pages/") ? "../scripts/" : "scripts/";
+    const viewerPage = window.location.pathname.includes("/pages/") ? "script-viewer.html" : "pages/script-viewer.html";
+    const projectFromBody = document.body ? document.body.dataset.scriptProject : "";
+
+    const normalizeScripts = (items, fallbackProject) => {
+        if (!Array.isArray(items)) {
+            return [];
+        }
+
+        return items
+            .map((item) => {
+                if (typeof item === "string") {
+                    return { file: item };
+                }
+                return item || null;
+            })
+            .filter(Boolean)
+            .map((item) => {
+                const fileName = item.file || "";
+                if (!fileName) {
+                    return null;
+                }
+                const baseName = fileName.replace(/\.cs$/i, "");
+                const labelEn = item.label && item.label.en ? item.label.en : baseName;
+                const labelNl = item.label && item.label.nl ? item.label.nl : labelEn;
+                return {
+                    ...item,
+                    file: fileName,
+                    project: item.project || fallbackProject || "",
+                    label: { en: labelEn, nl: labelNl }
+                };
+            })
+            .filter(Boolean);
+    };
+
+    const buildShelf = (items) => {
+        const scripts = normalizeScripts(items, projectFromBody);
         if (!scripts.length) {
             return;
         }
@@ -164,7 +184,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const action = document.createElement("a");
             action.className = "btn script-open";
-            action.href = item.path ? item.path : `${scriptPrefix}${item.file}`;
+            const params = new URLSearchParams();
+            if (item.project) {
+                params.set("project", item.project);
+            }
+            if (item.file) {
+                params.set("file", item.file);
+            }
+            if (item.label && item.label.en) {
+                params.set("labelEn", item.label.en);
+            }
+            if (item.label && item.label.nl) {
+                params.set("labelNl", item.label.nl);
+            }
+            const viewerUrl = params.toString() ? `${viewerPage}?${params.toString()}` : "";
+            const rawBase =
+                item.project && item.project !== "main" ? `${scriptPrefix}${item.project}/` : scriptPrefix;
+            const rawFallback = item.path ? item.path : `${rawBase}${item.file}`;
+            action.href = viewerUrl || rawFallback;
             action.target = "_blank";
             action.rel = "noopener noreferrer";
             action.innerHTML = `
@@ -180,5 +217,10 @@ document.addEventListener("DOMContentLoaded", function () {
         shelf.appendChild(title);
         shelf.appendChild(list);
         document.body.appendChild(shelf);
+    };
+
+    if (Array.isArray(window.projectScripts) && window.projectScripts.length) {
+        buildShelf(window.projectScripts);
     }
 });
+
