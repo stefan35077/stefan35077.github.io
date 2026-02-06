@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const codeBlock = document.getElementById("viewerCode");
     const copyButton = document.getElementById("viewerCopy");
     const downloadLink = document.getElementById("viewerDownload");
-    const rawLink = document.getElementById("viewerRaw");
 
     const setStatus = (enText, nlText) => {
         if (statusEn) {
@@ -66,10 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (downloadLink) {
         downloadLink.href = resolvedPath;
         downloadLink.setAttribute("download", file);
-    }
-
-    if (rawLink) {
-        rawLink.href = resolvedPath;
     }
 
     fetch(resolvedPath, { cache: "no-store" })
