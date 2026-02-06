@@ -161,6 +161,18 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        const buttons = document.getElementById("buttons");
+        if (buttons && !document.getElementById("scriptsScrollHint")) {
+            const hint = document.createElement("p");
+            hint.id = "scriptsScrollHint";
+            hint.className = "project-scroll-hint";
+            hint.innerHTML = `
+                <span class="English">Scroll down for project scripts.</span>
+                <span class="Dutch">Scroll naar beneden voor project scripts.</span>
+            `;
+            buttons.insertAdjacentElement("beforebegin", hint);
+        }
+
         const shelf = document.createElement("section");
         shelf.className = "script-shelf";
         shelf.id = "scriptShelf";

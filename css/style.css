@@ -562,12 +562,14 @@ textarea {
 }
 
 #profile{
-    border-radius: 100px;
+    border-radius: 50%;
     border: solid 2px var(--main-color);
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     object-position: center;
+    background-color: rgba(21, 29, 38, 0.9);
+    display: block;
 }
 
 #myName{
@@ -577,8 +579,10 @@ textarea {
 
 #myInformation{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    gap: 16px;
     padding: 25px;
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -586,6 +590,28 @@ textarea {
     color: white;
     background-color: rgba(21, 29, 38, 0.9);
     box-shadow: 0 18px 28px var(--shadow-color);
+}
+
+.aboutText{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.aboutText p{
+    margin: 0;
+    line-height: 1.7;
+}
+
+.aboutHighlights{
+    margin: 4px 0 0;
+    padding-left: 22px;
+    display: grid;
+    gap: 8px;
+}
+
+.aboutHighlights strong{
+    color: var(--main-color);
 }
 
 .skillsHeader{
@@ -631,6 +657,54 @@ textarea {
     justify-content: center;
 }
 
+.project-scroll-hint{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    max-width: calc(100% - 20px);
+    margin: 8px auto 10px;
+    padding: 10px 16px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid rgba(224, 88, 74, 0.65);
+    border-radius: 999px;
+    background: rgba(224, 88, 74, 0.16);
+    box-shadow: 0 12px 20px rgba(5, 9, 13, 0.5);
+    animation: hintPulse 1.4s ease-in-out infinite;
+}
+
+.project-scroll-hint::before{
+    content: "\2193";
+    color: var(--main-color);
+    font-size: 1.15rem;
+}
+
+.project-scroll-hint::after{
+    content: "\2193";
+    color: var(--main-color);
+    font-size: 1.15rem;
+}
+
+@keyframes hintPulse {
+    0%,
+    100%{
+        transform: translateY(0);
+        opacity: 0.95;
+        box-shadow: 0 12px 20px rgba(5, 9, 13, 0.5);
+    }
+    50%{
+        transform: translateY(4px);
+        opacity: 1;
+        box-shadow: 0 16px 24px rgba(5, 9, 13, 0.58);
+    }
+}
+
 .btn {
     display: flex;
     align-items: center;
@@ -659,6 +733,15 @@ textarea {
 
 .itchLink{
     margin: 25px auto 0;
+}
+
+.homeLinks{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
 }
 
 #mySkills{

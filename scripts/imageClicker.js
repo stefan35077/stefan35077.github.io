@@ -14,7 +14,7 @@ function showImage(index) {
 function nextImage() {
     currentImageIndex++;
     if (currentImageIndex >= images.length) {
-        currentImageIndex = 0; // Reset to first image
+        currentImageIndex = 0;
     }
     showImage(currentImageIndex);
 }
@@ -22,10 +22,9 @@ function nextImage() {
 function prevImage() {
     currentImageIndex--;
     if (currentImageIndex < 0) {
-        currentImageIndex = images.length - 1; // Set to last image
+        currentImageIndex = images.length - 1;
     }
     showImage(currentImageIndex);
 }
 
-// Initially display the first image
 showImage(currentImageIndex);
